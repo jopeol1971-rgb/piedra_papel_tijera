@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera - Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Piedra, Papel o Tijera</h1>
+        <h2 id="score">Tú: 0 | CPU: 0</h2>
+        
+        <div class="buttons">
+            <button onclick="play('piedra')">🪨 Piedra</button>
+            <button onclick="play('papel')">📄 Papel</button>
+            <button onclick="play('tijera')">✂️ Tijera</button>
+        </div>
+
+        <div id="result">¡Elige tu arma!</div>
+        <button id="reset-btn" onclick="resetGame()">Reiniciar</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
